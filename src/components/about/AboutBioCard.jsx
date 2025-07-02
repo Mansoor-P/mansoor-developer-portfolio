@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/Card";
 import { MapPin, Calendar } from "lucide-react";
 
 const AboutBioCard = () => (
