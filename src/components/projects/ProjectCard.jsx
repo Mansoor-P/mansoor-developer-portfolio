@@ -1,55 +1,57 @@
-import { Github, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardTitle, CardDescription } from "../ui/Card";
 import { Badge } from "../ui/Badge";
 
 const ProjectCard = ({ project }) => {
-  const defaultImage = "/default-project.jpg"; 
+  const defaultImage = "/default-project.jpg";
 
   return (
-    <Card className="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 w-full sm:w-[360px] h-[260px] ">
-      {/* Image */}
-      <div className="h-[200px] overflow-hidden relative">
+    <Card className="group flex flex-col sm:flex-row w-full max-w-3xl overflow-hidden rounded-xl shadow-md hover:shadow-xl transition duration-300">
+      {/* Image Section (30%) */}
+      <div className="sm:w-[30%] w-full h-[200px] sm:h-auto relative flex-shrink-0">
         <img
           src={project.image || defaultImage}
-          alt={project.title}
+          alt={project.name}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
+      </div>
 
-        {/* Hover Overlay */}
-        <div className="absolute inset-0 bg-black/80 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-between">
-          <div>
-            <h3 className="text-lg font-semibold">{project.name}</h3>
-            <p className="text-sm text-white/70 mt-1 line-clamp-3">
-              {project.description.length > 100
-                ? project.description.slice(0, 100) + "..."
-                : project.description}
-            </p>
+      {/* Content Section (70%) */}
+      <div className="sm:w-[70%] w-full p-4 flex flex-col justify-between">
+        {/* Title */}
+        <CardTitle className="text-lg font-semibold text-gray-800 dark:text-white">
+          {project.name}
+        </CardTitle>
 
-            {/* techStack Stack */}
-            <div className="flex flex-wrap gap-1 mt-3">
-              {project.techStack?.map((techStack) => (
-                <Badge
-                  key={techStack}
-                  className="text-xs bg-white/10 border border-white/20 text-white"
-                >
-                  {techStack}
-                </Badge>
-              ))}
-            </div>
-          </div>
+        {/* Description */}
+        <CardDescription className="text-sm mt-2 text-gray-600 dark:text-gray-300 line-clamp-3">
+          {project.description.length > 120
+            ? project.description.slice(0, 120) + "..."
+            : project.description}
+        </CardDescription>
 
-          {/* View Details Link */}
+        {/* Tech Stack Badges */}
+        <div className="flex flex-wrap gap-2 mt-3">
+          {project.techStack?.map((tech) => (
+            <Badge
+              key={tech}
+              className="text-xs bg-gray-100 dark:bg-white/10 dark:border-white/20 dark:text-white"
+            >
+              {tech}
+            </Badge>
+          ))}
+        </div>
+
+        {/* View Details Link */}
+        <div className="mt-4">
           <Link
             to={`/projects/${project.slug}`}
-            className="text-sm text-blue-400 hover:underline mt-1"
+            className="text-sm font-medium text-blue-600 hover:underline"
           >
             View Details →
           </Link>
         </div>
       </div>
-
-      
     </Card>
   );
 };

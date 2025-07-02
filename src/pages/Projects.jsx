@@ -14,15 +14,15 @@ export default function Projects() {
       : projects.filter((project) => project.category === selectedCategory);
 
   return (
-    <div className="relative py-16 px-4 sm:px-6 lg:px-8 min-h-screen ">
+    <div className="relative py-16 px-4 sm:px-6 lg:px-8 min-h-screen">
       <Watermark />
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold mb-4">My Projects</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A curated selection of my work—ranging from scalable backends to interactive frontends and tools.
+            A curated selection of my work ranging from scalable backends to interactive frontends and tools.
           </p>
         </div>
 
@@ -43,8 +43,8 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Projects Grid */}
-        <div className=" grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {/* Projects List (Vertical Layout) */}
+        <div className="space-y-8">
           {filteredProjects.map((project, idx) => (
             <ProjectCard key={idx} project={project} />
           ))}
