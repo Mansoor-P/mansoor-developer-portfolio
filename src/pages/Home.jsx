@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Button } from "../components/ui/Button";
 import { Badge } from "../components/ui/Badge";
 import { motion } from "framer-motion";
-import { Github, Mail, Linkedin } from "lucide-react"
 import {
   Linkedin,
   Github,
