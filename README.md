@@ -1,12 +1,96 @@
-# React + Vite
+# 🚀 Mansoor Pathikonda – Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal developer portfolio – a responsive, animated, and theme-aware website showcasing my projects, skills, and experience. Built with modern technologies and crafted with attention to detail, this portfolio reflects my passion for clean code, UI/UX, and impactful software development.
 
-Currently, two official plugins are available:
+![Portfolio Preview](/src//assets//screenshots/portfolio.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: [React](https://react.dev/), [Vite](https://vitejs.dev/), [Tailwind CSS](https://tailwindcss.com/)
+- **Styling & Animations**: Tailwind CSS, Framer Motion
+- **Icons**: Lucide React
+- **Routing**: React Router
+- **Themes**: Light / Dark / System toggle
+- **Deployment**: Vercel
+
+---
+
+## 🌟 Features
+
+- 🎨 **Dark/Light/System Theme** : with smooth transitions
+- 📱 **Responsive Design** : Mobile-first and scalable
+- 💧 **Watermark Text** per section for elegant page branding
+- 💻 **Project Showcase** : with tags, hover effects & filter
+- 📄 **Experience & Skills** : in a visually structured format
+- 🧭 **Smooth Routing** : with page transition animations
+- 📷 **Hero Section** : with intro, social links, and call to action
+
+---
+
+## 🔗 Live Demo
+
+👉 [View Portfolio Live](https://mansoor-p.vercel.app/)
+
+---
+
+## 🧠 Projects Included
+
+1. **📰 Article Posting Platform**  
+   Microservice-based blogging system with Spring Boot, JWT, React & Quill  
+   [🔗 GitHub](https://github.com/Mansoor-P/blog-application)
+
+2. **💼 Job Review Web App**  
+   Fullstack app with RabbitMQ, PostgreSQL, Docker, and Java Spring  
+   [🔗 GitHub](https://github.com/Mansoor-P/jobsmicroservice)
+
+3. **🖼️ This Portfolio Website**  
+   Built with Vite + React + Tailwind + Framer Motion  
+   [🔗 GitHub](https://github.com/username/mansoor-profile)
+
+---
+
+## ✨ Getting Started Locally
+
+# 1. Clone the repository
+
+```bash
+git clone https://github.com/Mansoor-P/mansoor-developer-portfolio.git
+```
+
+```bash
+cd mansoor-profile
+```
+
+# 2. Install dependencies
+
+```bash
+npm install
+```
+
+# 3. Start development server
+
+```bash
+npm run dev
+```
+
+---
+
+## 📬 Connect with Me
+
+- [LinkedIn](https://linkedin.com/in/mansoor0731)
+- [GitHub](https://github.com/Mansoor-P)
+- 📧 [mansoorpathikonda@gmail.com](mailto:mansoorpathikonda@gmail.com)
+
+---
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+### 🙌 Thanks for Visiting!
+
+If you like what you see or want to collaborate, feel free to reach out. Let’s build something amazing together! 🚀
