@@ -3,7 +3,7 @@ import { Button } from "../ui/Button";
 import { Download, ExternalLink } from "lucide-react";
 
 const AboutCTASection = () => (
-  <div className="text-center space-y-4">
+  <div className="text-center space-y-4 ">
     <h2 className="text-2xl font-bold">Let's Work Together</h2>
     <p className="text-muted-foreground">
       I'm always interested in new opportunities and exciting projects.

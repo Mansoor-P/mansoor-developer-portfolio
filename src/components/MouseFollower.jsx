@@ -53,7 +53,12 @@ export default function MouseFollower() {
         borderRadius: "50%",
         pointerEvents: "none",
         border: "2px solid gray",
-        boxShadow: "0 0 15px rgba(0,0,0,0.2)",
+       boxShadow: `
+  0 0 5px rgba(255, 0, 150, 0.2),
+  0 0 10px rgba(255, 100, 100, 0.2),
+  0 0 15px rgba(0, 200, 255, 0.3)
+`,
+
         zIndex: 9999,
 
         // This makes the magnifier effect:

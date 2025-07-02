@@ -1,7 +1,7 @@
 export function Card({ children, className = "", as: Component = "div" }) {
   return (
     <Component
-      className={`rounded-lg border bg-white/10 dark:bg-gray-900 p-4 shadow-sm ${className}`}
+      className={`rounded-lg border  bg-white dark:bg-black text-black dark:text-white  p-4 shadow-sm ${className}`}
     >
       {children}
     </Component>

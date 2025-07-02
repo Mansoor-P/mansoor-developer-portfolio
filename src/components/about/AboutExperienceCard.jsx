@@ -19,7 +19,7 @@ const experience = [
     company: "Remote",
     period: "2024 – Present",
     description:
-      "Worked with clients on scalable backend APIs using Java, Spring Boot, and PostgreSQL. Implemented system design principles and CI/CD pipelines.",
+      "Worked with clients on scalable backend APIs using Java, Spring Boot, and PostgreSQL. Implemented system design principles.",
   },
 ];
 
@@ -44,7 +44,7 @@ const AboutExperienceCard = () => (
                   </p>
                 </div>
 
-                <p className="italic text-sm text-muted-foreground whitespace-nowrap">
+                <p className=" text-sm text-muted-foreground whitespace-nowrap">
                   {job.period}
                 </p>
               </div>
