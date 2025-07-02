@@ -1,46 +1,11 @@
-import { useState } from "react"
-
-import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/Card"
-import { Input } from "../components/ui/input"
-import { Textarea } from "../components/ui/textarea"
-import { Label } from "../components/ui/label"
+import { Mail, MapPin, Phone, Github, Linkedin, Twitter } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/Card"
 import { Button } from "../components/ui/Button"
-import { Link } from "react-router-dom"
+import Watermark from "../components/Watermark"
 
-import Watermark from "../components/Watermark";
- 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  })
-
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    // Simulate form submission delay
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-
-    setFormData({ name: "", email: "", subject: "", message: "" })
-    setIsSubmitting(false)
-    alert("Message sent successfully! I’ll get back to you soon.")
-  }
-
-  const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }))
-  }
-
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto mt-20 px-4 py-8">
       <Watermark />
       <div className="max-w-4xl mx-auto">
         {/* Header */}
@@ -52,79 +17,8 @@ export default function Contact() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
-          {/* Contact Form */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Send me a message</CardTitle>
-              <CardDescription>I usually reply within 24 hours.</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      placeholder="you@example.com"
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="subject">Subject</Label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    placeholder="Reason for reaching out"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    placeholder="Your message..."
-                    rows={6}
-                  />
-                </div>
-
-                <Button type="submit" className="w-full" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending..." : (
-                    <>
-                      <Send className="h-4 w-4 mr-2" />
-                      Send Message
-                    </>
-                  )}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-
-          {/* Contact Info & Social */}
-          <div className="space-y-6">
+          {/* Left Column Placeholder */}
+          <div className=" text-lg p-2 ">
             <Card>
               <CardHeader>
                 <CardTitle>Contact Information</CardTitle>
@@ -153,7 +47,11 @@ export default function Contact() {
                 </div>
               </CardContent>
             </Card>
+          </div>
 
+          {/* Contact Info & Social */}
+          <div className="space-y-6">
+          
             <Card>
               <CardHeader>
                 <CardTitle>Social Media</CardTitle>
