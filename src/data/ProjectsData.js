@@ -1,10 +1,64 @@
 import articleImage from "../assets/projects/article-posting.png";
 import jobReview from "../assets/projects/job-review.png";
-// import portfolioImage from "../assets/projects/portfolio.png";
+import careerSphereImage from "../assets/projects/career-sphere.png";
+import HotelImage from "../assets/projects/hotel.jpg";
 
 const projects = [
   {
     id: 1,
+    slug: "careersphere-platform",
+    name: "CareerSphere - Career Discovery & Job Navigation",
+    description:
+      "An AI-powered career platform for students and freshers with job discovery, roadmaps, resume tools, and interview prep.",
+    longDescription:
+      "CareerSphere is a full-stack platform that guides students, freshers, and self-taught developers in their career journey. It includes smart job feeds, personalized roadmaps, resume analyzers, AI career assistants, and an interactive community. Built with React, Tailwind, Node.js, and PostgreSQL, with future integration of LangChain and OpenAI tools.",
+    github: "https://github.com/Mansoor-P/techiesphere.git",
+    demo: "demo",
+    image: careerSphereImage,
+    date: "2025-07-01",
+    status: "In Progress",
+    category: "Full Stack",
+    tags: [
+      "Career Platform",
+      "AI Tools",
+      "Resume Analyzer",
+      "Job Discovery",
+      "LangChain",
+    ],
+    techStack: [
+      "React",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Prisma",
+      "OpenAI",
+    ],
+    features: [
+      "Smart Job Feed with filters and AI job match",
+      "Personalized career roadmaps and trackers",
+      "Resume Analyzer and Interview Prep Tools",
+      "Role-based dashboards (Student, Admin, Recruiter)",
+      "AI assistant using OpenAI + LangChain (WIP)",
+    ],
+    challenges: [
+      "Designing modular architecture for scalable features",
+      "Building smart matching logic with career data",
+      "Implementing role-based dynamic dashboards",
+    ],
+    architecture:
+      "Modular service-oriented architecture. Frontend built with React + ShadCN UI + Zustand. Backend built with Node.js, Express, and Prisma ORM. PostgreSQL for data storage. Deployment via Railway and Vercel.",
+    keyImplementations: [
+      "JobMatch AI feed filtering by role, skill, and location",
+      "Resume parsing and score feedback system",
+      "Dynamic roadmap + progress tracking dashboard",
+      "Responsive, mobile-friendly UI with dark mode",
+    ],
+    readingTime: "6 min",
+    featured: true,
+  },
+  {
+    id: 2,
     slug: "article-posting-platform",
     name: "Article Posting Platform",
     description:
@@ -16,7 +70,7 @@ const projects = [
     image: articleImage,
     date: "2024-02-20",
     status: "Completed",
-    category: "Backend",
+    category: "Frontend",
     tags: ["Spring Boot", "JWT", "Microservices", "Quill"],
     techStack: ["Java", "Spring Boot", "React", "Tailwind CSS", "JWT", "Quill"],
     features: [
@@ -41,7 +95,7 @@ const projects = [
     featured: true,
   },
   {
-    id: 2,
+    id: 3,
     slug: "job-review-web-app",
     name: "Job Review Web App",
     description:
@@ -53,7 +107,7 @@ const projects = [
     image: jobReview,
     date: "2023-11-12",
     status: "Completed",
-    category: "Full Stack",
+    category: "Backend",
     tags: ["Microservices", "RabbitMQ", "PostgreSQL", "Docker"],
     techStack: ["Java", "Spring Boot", "RabbitMQ", "PostgreSQL", "Docker"],
     features: [
@@ -77,121 +131,51 @@ const projects = [
     readingTime: "5 min",
     featured: false,
   },
-  {
-  id: 3,
-  slug: "online-code-editor",
-  name: "Online Code Editor",
-  description:
-    "A real-time collaborative code editor with syntax highlighting and multi-language support.",
-  longDescription:
-    "An online code editor built for developers to write, edit, and share code in real time. Supports syntax highlighting, multiple programming languages, and collaborative editing using WebSockets. The editor integrates with a backend code execution engine and provides a seamless user experience with a responsive UI.",
-  github: "https://github.com/your-username/online-code-editor",
-  demo: "https://online-code-editor-demo.vercel.app",
-  image: "", 
-  date: "2024-06-15",
-  status: "Completed",
-  category: "Full Stack",
-  tags: ["Code Editor", "WebSocket", "Collaborative", "Syntax Highlighting"],
-  techStack: ["React", "Node.js", "Express", "Socket.io", "Monaco Editor"],
-  features: [
-    "Real-time collaborative editing with WebSocket",
-    "Syntax highlighting using Monaco Editor",
-    "Multi-language code execution support",
-    "Shareable code session links",
-    "Responsive and minimal UI",
-  ],
-  challenges: [
-    "Maintaining real-time sync across multiple users",
-    "Secure code execution in sandboxed environments",
-    "Performance optimization for larger code snippets",
-  ],
-  architecture:
-    "Frontend built in React with Monaco Editor. Backend uses Express and WebSocket (Socket.io) for real-time sync. A code execution service runs inside Docker containers for secure, isolated language execution.",
-  keyImplementations: [
-    "Collaborative WebSocket implementation with user session handling",
-    "Monaco Editor integration and dynamic language mode switching",
-    "Secure Docker-based code execution engine",
-  ],
-  readingTime: "6 min",
-  featured: true
-},
-{
-  id: 5,
-  slug: "hotel-booking-backend-api",
-  name: "Hotel Booking Backend API",
-  description:
-    "A RESTful API for managing hotel bookings, customers, and room availability using Spring Boot.",
-  longDescription:
-    "This backend service provides APIs to manage hotel room bookings, customer details, and room availability. Built using Spring Boot and structured in a layered architecture with role-based authentication. The API supports CRUD operations for hotels, rooms, and bookings, and integrates with a PostgreSQL database for persistent storage.",
-  github: "https://github.com/Mansoor-P/hotel-booking-api",
-  demo: "",
-  image: "", 
-  date: "2024-03-22",
-  status: "Completed",
-  category: "Backend",
-  tags: ["Spring Boot", "REST API", "Hotel Booking", "Authentication"],
-  techStack: ["Java", "Spring Boot", "Spring Security", "PostgreSQL", "Docker"],
-  features: [
-    "Room booking and availability tracking",
-    "Customer and hotel management",
-    "Role-based access control (admin, customer)",
-    "API documentation with Swagger",
-    "Containerized using Docker",
-  ],
-  challenges: [
-    "Designing clean, modular APIs",
-    "Implementing role-based authorization securely",
-    "Managing booking conflicts and availability",
-  ],
-  architecture:
-    "Layered architecture with controllers, services, and repositories. PostgreSQL handles data storage. Spring Security manages authentication and authorization. The app is containerized with Docker for deployment.",
-  keyImplementations: [
-    "JWT-based authentication and role-based access",
-    "Exception handling and API validation",
-    "Swagger integration for API documentation",
-  ],
-  readingTime: "4 min",
-  featured: false
-},
-{
-  id: 6,
-  slug: "food-delivery-frontend",
-  name: "Food Delivery App (Frontend)",
-  description:
-    "A modern and responsive food ordering frontend built with React and Tailwind CSS.",
-  longDescription:
-    "This is the frontend for a food delivery platform that allows users to browse restaurants, view menus, place orders, and track deliveries. Built with React for UI rendering and Tailwind CSS for styling, the app ensures a responsive and smooth user experience. Integrated with backend APIs for real-time order management and user authentication.",
-  github: "https://github.com/Mansoor-P/food-delivery-frontend",
-  demo: "https://food-delivery-frontend.vercel.app",
-  image: "",
-  date: "2024-05-10",
-  status: "Completed",
-  category: "Frontend",
-  tags: ["React", "Food Delivery", "Tailwind CSS", "UI/UX"],
-  techStack: ["React", "Tailwind CSS", "Axios", "React Router"],
-  features: [
-    "Restaurant and menu browsing",
-    "Cart and order placement flow",
-    "Order tracking UI",
-    "User login and signup pages",
-    "Responsive design for all devices",
-  ],
-  challenges: [
-    "Dynamic cart management and price updates",
-    "Maintaining user session across navigation",
-    "UI responsiveness across multiple screen sizes",
-  ],
-  architecture:
-    "Component-based React architecture with routing using React Router. State is managed locally with hooks, and Axios is used for API interactions. Styled using utility-first Tailwind CSS.",
-  keyImplementations: [
-    "Reusable components for menu and restaurant cards",
-    "Persistent cart state using local storage",
-    "Axios setup with interceptors for auth handling",
-  ],
-  readingTime: "4 min",
-  featured: false
-},
 
+  {
+    id: 4,
+    slug: "hotel-booking-backend-api",
+    name: "Hotel Booking Backend API",
+    description:
+      "A RESTful API for managing hotel bookings, customers, and room availability using Spring Boot.",
+    longDescription:
+      "This backend service provides APIs to manage hotel room bookings, customer details, and room availability. Built using Spring Boot and structured in a layered architecture with role-based authentication. The API supports CRUD operations for hotels, rooms, and bookings, and integrates with a PostgreSQL database for persistent storage.",
+    github: "https://github.com/Mansoor-P/hotel-booking-api",
+    demo: "",
+    image: HotelImage,
+    date: "2024-03-22",
+    status: "Completed",
+    category: "Backend",
+    tags: ["Spring Boot", "REST API", "Hotel Booking", "Authentication"],
+    techStack: [
+      "Java",
+      "Spring Boot",
+      "Spring Security",
+      "PostgreSQL",
+      "Docker",
+    ],
+    features: [
+      "Room booking and availability tracking",
+      "Customer and hotel management",
+      "Role-based access control (admin, customer)",
+      "API documentation with Swagger",
+      "Containerized using Docker",
+    ],
+    challenges: [
+      "Designing clean, modular APIs",
+      "Implementing role-based authorization securely",
+      "Managing booking conflicts and availability",
+    ],
+    architecture:
+      "Layered architecture with controllers, services, and repositories. PostgreSQL handles data storage. Spring Security manages authentication and authorization. The app is containerized with Docker for deployment.",
+    keyImplementations: [
+      "JWT-based authentication and role-based access",
+      "Exception handling and API validation",
+      "Swagger integration for API documentation",
+    ],
+    readingTime: "4 min",
+    featured: false,
+  },
 ];
 
 export default projects;

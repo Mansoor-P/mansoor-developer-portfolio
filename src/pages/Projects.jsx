@@ -14,45 +14,46 @@ export default function Projects() {
       : projects.filter((project) => project.category === selectedCategory);
 
   return (
-    <div className="relative py-16 px-4 sm:px-6 lg:px-8 min-h-screen">
+    <div className="relative min-h-screen py-16 px-4 sm:px-6 lg:px-8">
       <Watermark />
 
       <div className="max-w-5xl mx-auto">
-        {/* Heading */}
-        <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold mb-4">My Projects</h1>
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold tracking-tight mb-3">My Projects</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A curated selection of my work ranging from scalable backends to interactive frontends and tools.
+            A curated selection of my work from scalable backends to interactive frontends and developer tools.
           </p>
         </div>
 
-        {/* Filter Buttons */}
-        <div className="flex justify-center flex-wrap gap-4 mb-10">
-          {categories.map((cat) => (
+        {/* Category Filter */}
+        <div className="flex justify-center flex-wrap gap-3 mb-12">
+          {categories.map((category) => (
             <button
-              key={cat}
-              onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-1.5 rounded-full text-sm border transition ${
-                selectedCategory === cat
-                  ? "bg-blue-600 text-white border-blue-600"
-                  : "bg-transparent border-gray-400 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
-              }`}
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-4 py-1.5 rounded-full text-sm font-medium border transition focus:outline-none focus:ring-2 focus:ring-offset-2
+                ${
+                  selectedCategory === category
+                    ? "bg-blue-600 text-white border-blue-600 focus:ring-blue-500"
+                    : "bg-transparent border-gray-300 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                }`}
+              aria-pressed={selectedCategory === category}
             >
-              {cat}
+              {category}
             </button>
           ))}
         </div>
 
-        {/* Projects List (Vertical Layout) */}
-        <div className="space-y-8">
-          {filteredProjects.map((project, idx) => (
-            <ProjectCard key={idx} project={project} />
-          ))}
-        </div>
-
-        {/* Fallback */}
-        {filteredProjects.length === 0 && (
-          <p className="text-center text-muted-foreground mt-10">
+        {/* Projects List */}
+        {filteredProjects.length > 0 ? (
+          <div className="space-y-8">
+            {filteredProjects.map((project) => (
+              <ProjectCard key={project.id || project.slug} project={project} />
+            ))}
+          </div>
+        ) : (
+          <p className="text-center text-muted-foreground mt-16">
             No projects found in this category.
           </p>
         )}
