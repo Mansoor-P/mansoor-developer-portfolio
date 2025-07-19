@@ -13,7 +13,7 @@ const projects = [
     longDescription:
       "CareerSphere is a full-stack platform that guides students, freshers, and self-taught developers in their career journey. It includes smart job feeds, personalized roadmaps, resume analyzers, AI career assistants, and an interactive community. Built with React, Tailwind, Node.js, and PostgreSQL, with future integration of LangChain and OpenAI tools.",
     github: "https://github.com/Mansoor-P/techiesphere.git",
-    demo: "demo",
+    demo: "https://v0-v-1-mansoor-new-project-5v9c4at0d-mansoor-portfolio.vercel.app/",
     image: careerSphereImage,
     date: "2025-07-01",
     status: "In Progress",

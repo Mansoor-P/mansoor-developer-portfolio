@@ -181,7 +181,7 @@ export default function Home() {
         {/* Social Icons */}
         <div className="flex justify-center md:justify-start gap-6 mt-10 text-gray-600 dark:text-gray-300">
           <a
-            href="https://linkedin.com/in/your-linkedin"
+            href="https://linkedin.com/in/mansoor0731"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -190,7 +190,7 @@ export default function Home() {
             <Linkedin size={28} />
           </a>
           <a
-            href="https://github.com/your-github"
+            href="https://github.com/Mansoor-P"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -199,14 +199,14 @@ export default function Home() {
             <Github size={28} />
           </a>
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:munaf6007@gmail.com"
             aria-label="Email"
             className="hover:text-red-600 dark:hover:text-red-400 transition-colors"
           >
             <Mail size={28} />
           </a>
           <a
-            href="https://twitter.com/your-twitter"
+            href="https://twitter.com/echotrend_in"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
