@@ -3,7 +3,7 @@ import ProjectCard from "../components/projects/ProjectCard";
 import projects from "../data/ProjectsData";
 import Watermark from "../components/Watermark";
 
-const categories = ["All", "Full Stack", "Frontend", "Backend"];
+const categoryTabs = ["All", "Frontend", "Backend", "Fullstack"];
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -14,40 +14,32 @@ export default function Projects() {
       : projects.filter((project) => project.category === selectedCategory);
 
   return (
-    <div className="relative min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-screen py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-neutral-100 dark:from-black dark:to-neutral-900">
       <Watermark />
 
-      <div className="max-w-5xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold tracking-tight mb-3">My Projects</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A curated selection of my work from scalable backends to interactive frontends and developer tools.
-          </p>
-        </div>
+      <div className="max-w-6xl mx-auto">
 
-        {/* Category Filter */}
-        <div className="flex justify-center flex-wrap gap-3 mb-12">
-          {categories.map((category) => (
+
+        {/* Category Tabs */}
+        <div className="flex gap-4 mb-12 flex-wrap">
+          {categoryTabs.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-1.5 rounded-full text-sm font-medium border transition focus:outline-none focus:ring-2 focus:ring-offset-2
-                ${
-                  selectedCategory === category
-                    ? "bg-blue-600 text-white border-blue-600 focus:ring-blue-500"
-                    : "bg-transparent border-gray-300 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+              className={`px-4 py-1.5 rounded-full text-sm font-semibold transition border
+                ${selectedCategory === category
+                  ? "bg-black text-white dark:bg-white dark:text-black border-black dark:border-white"
+                  : "bg-transparent text-gray-600 dark:text-gray-300 border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                 }`}
-              aria-pressed={selectedCategory === category}
             >
               {category}
             </button>
           ))}
         </div>
 
-        {/* Projects List */}
+        {/* Projects Grid */}
         {filteredProjects.length > 0 ? (
-          <div className="space-y-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {filteredProjects.map((project) => (
               <ProjectCard key={project.id || project.slug} project={project} />
             ))}
@@ -57,6 +49,22 @@ export default function Projects() {
             No projects found in this category.
           </p>
         )}
+
+        {/* Footer Link */}
+        <div className="mt-20 text-left text-sm text-gray-500 dark:text-gray-400">
+          <a
+            href="https://drive.google.com/file/d/1zXewp9gSgaOjR45rYY4MFKZ8TL39JOHB/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center hover:underline group"
+          >
+            Let’s Go To My Resume.
+            <span className="ml-1 transform group-hover:translate-x-1 transition-transform duration-200">
+              →
+            </span>
+          </a>
+        </div>
+
       </div>
     </div>
   );

@@ -1,17 +1,16 @@
-@import "tailwindcss";
+/* ✅ All @import statements must be at the very top */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lexend:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import "tailwindcss";
 
-
+/* 👇 Everything else comes after */
 @custom-variant dark (&:where(.dark, .dark *));
 
 body {
-
   font-family: "Lexend", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300; /* normal weight */
 }
 
-/* Custom grid background for light mode */
 .bg-grid {
   background-image: 
     linear-gradient(to right, rgba(0, 0, 0, 0.077) 1px, transparent 1px),
@@ -19,7 +18,6 @@ body {
   background-size: 90px 90px;
 }
 
-/* Custom grid background for dark mode */
 .dark .bg-grid {
   background-image: 
     linear-gradient(to right, rgba(255, 255, 255, 0.12) 1px, transparent 1px),

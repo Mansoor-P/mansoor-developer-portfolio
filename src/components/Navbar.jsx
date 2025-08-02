@@ -5,7 +5,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import ThemeToggle from "../components/ThemeToggle";
 
 const navLinks = [
-  { path: "/", label: "Home" },
+  // { path: "/", label: "Home" },
   { path: "/about", label: "About" },
   { path: "/projects", label: "Projects" },
   { path: "/contact", label: "Contact" },

@@ -10,7 +10,7 @@ import Watermark from "../components/Watermark";
 export default function About() {
   return (
     <div className="container mx-auto px-2 py-4 mb-10">
-       <Watermark />
+      <Watermark />
       <div className="max-w-5xl mx-auto space-y-12">
         <AboutHeader />
         <AboutBioCard />
@@ -18,7 +18,7 @@ export default function About() {
         <AboutExperienceCard />
         <AboutEducation />
         <AboutCTASection />
-       
+
       </div>
     </div>
   );
