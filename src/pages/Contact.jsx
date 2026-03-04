@@ -28,7 +28,7 @@ export default function Contact() {
                   <Mail className="h-5 w-5 text-primary" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-muted-foreground">mansoor@example.com</p>
+                    <p className="text-muted-foreground">munaf6007@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -59,19 +59,19 @@ export default function Contact() {
               <CardContent>
                 <div className="flex space-x-4">
                   <Button variant="outline" size="icon" asChild>
-                    <a href="https://github.com/mansoor" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Mansoor-P" target="_blank" rel="noopener noreferrer">
                       <Github className="h-4 w-4" />
                       <span className="sr-only">GitHub</span>
                     </a>
                   </Button>
                   <Button variant="outline" size="icon" asChild>
-                    <a href="https://linkedin.com/in/mansoor" target="_blank" rel="noopener noreferrer">
+                    <a href="https://linkedin.com/in/mansoor0731" target="_blank" rel="noopener noreferrer">
                       <Linkedin className="h-4 w-4" />
                       <span className="sr-only">LinkedIn</span>
                     </a>
                   </Button>
                   <Button variant="outline" size="icon" asChild>
-                    <a href="https://twitter.com/mansoor" target="_blank" rel="noopener noreferrer">
+                    <a href="https://x.com/echotrend_in" target="_blank" rel="noopener noreferrer">
                       <Twitter className="h-4 w-4" />
                       <span className="sr-only">Twitter</span>
                     </a>
@@ -92,11 +92,11 @@ export default function Contact() {
                   </div>
                   <div className="flex justify-between">
                     <span>Full-time Opportunities</span>
-                    <span className="text-yellow-600 font-medium">Open to discuss</span>
+                    <span className="text-green-600 font-medium">AVailable</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Consulting</span>
-                    <span className="text-green-600 font-medium">Available</span>
+                    <span className="text-yellow-600 font-medium">Open to discuss</span>
                   </div>
                 </div>
               </CardContent>

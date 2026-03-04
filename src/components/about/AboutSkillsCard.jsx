@@ -4,7 +4,7 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-} from "../ui/card";
+} from "../ui/Card";
 import { Badge } from "../ui/Badge";
 
 const skills = {

@@ -13,7 +13,13 @@ const AboutCTASection = () => (
         <Link to="/contact">Get In Touch</Link>
       </Button>
       <Button variant="outline">
-        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
+        <a
+          href="/Mansoor_Pathikonda_Resume.pdf"
+          download="Mansoor_Pathikonda_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center"
+        >
           <Download className="h-4 w-4 mr-2" />
           Download Resume
         </a>

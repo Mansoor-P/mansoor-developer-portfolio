@@ -1,5 +1,9 @@
 # 🚀 Mansoor Pathikonda – Developer Portfolio
+ ## 🔗 Live Demo
 
+👉 [View Portfolio Live](https://mansoor-developer-portfolio.vercel.app/)
+
+---
 Welcome to my personal developer portfolio – a responsive, animated, and theme-aware website showcasing my projects, skills, and experience. Built with modern technologies and crafted with attention to detail, this portfolio reflects my passion for clean code, UI/UX, and impactful software development.
 
 ![Portfolio Preview](/src//assets//screenshots/portfolio.png)
@@ -29,11 +33,7 @@ Welcome to my personal developer portfolio – a responsive, animated, and theme
 
 ---
 
-## 🔗 Live Demo
 
-👉 [View Portfolio Live](https://mansoor-p.vercel.app/)
-
----
 
 ## 🧠 Projects Included
 
