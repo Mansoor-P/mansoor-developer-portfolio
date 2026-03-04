@@ -1,70 +1,49 @@
-import React, { useState } from "react";
-import ProjectCard from "../components/projects/ProjectCard";
 import projects from "../data/ProjectsData";
-import Watermark from "../components/Watermark";
-
-const categoryTabs = ["All", "Frontend", "Backend", "Fullstack"];
+import { Github } from "lucide-react";
 
 export default function Projects() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
-  const filteredProjects =
-    selectedCategory === "All"
-      ? projects
-      : projects.filter((project) => project.category === selectedCategory);
-
   return (
-    <div className="relative min-h-screen py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-neutral-100 dark:from-black dark:to-neutral-900">
-      <Watermark />
+    <div className="max-w-4xl mx-auto px-6 py-16">
+      <h1 className="text-4xl font-bold mb-12 text-center">Projects</h1>
 
-      <div className="max-w-6xl mx-auto">
+      <div className="space-y-12">
+        {projects.map((project) => (
+          <div key={project.id} className="border-b pb-8">
+            {/* Header */}
+            <div className="flex justify-between items-start flex-wrap gap-2">
+              <h2 className="text-xl font-semibold">{project.name}</h2>
 
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-sm text-blue-600 hover:underline"
+                >
+                  <Github size={16} />
+                  GitHub
+                </a>
+              )}
+            </div>
 
-        {/* Category Tabs */}
-        <div className="flex gap-4 mb-12 flex-wrap">
-          {categoryTabs.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-1.5 rounded-full text-sm font-semibold transition border
-                ${selectedCategory === category
-                  ? "bg-black text-white dark:bg-white dark:text-black border-black dark:border-white"
-                  : "bg-transparent text-gray-600 dark:text-gray-300 border-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
-                }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+            {/* Tech Stack */}
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+              {project.techStack.join(" • ")}
+            </p>
 
-        {/* Projects Grid */}
-        {filteredProjects.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {filteredProjects.map((project) => (
-              <ProjectCard key={project.id || project.slug} project={project} />
-            ))}
+            {/* Description */}
+            <p className="mt-3 text-gray-700 dark:text-gray-300 leading-relaxed">
+              {project.description}
+            </p>
+
+            {/* Highlights */}
+            <ul className="list-disc list-inside mt-3 space-y-1 text-sm text-gray-700 dark:text-gray-300">
+              {project.highlights.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ul>
           </div>
-        ) : (
-          <p className="text-center text-muted-foreground mt-16">
-            No projects found in this category.
-          </p>
-        )}
-
-        {/* Footer Link */}
-        <div className="mt-20 text-left text-sm text-gray-500 dark:text-gray-400">
-          <a
-            href="https://drive.google.com/file/d/1zXewp9gSgaOjR45rYY4MFKZ8TL39JOHB/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center hover:underline group"
-          >
-            Let’s Go To My Resume.
-            <span className="ml-1 transform group-hover:translate-x-1 transition-transform duration-200">
-              →
-            </span>
-          </a>
-        </div>
-
+        ))}
       </div>
     </div>
   );

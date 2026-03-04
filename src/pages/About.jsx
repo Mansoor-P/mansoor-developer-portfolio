@@ -18,7 +18,6 @@ export default function About() {
         <AboutExperienceCard />
         <AboutEducation />
         <AboutCTASection />
-
       </div>
     </div>
   );
