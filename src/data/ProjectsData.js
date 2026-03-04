@@ -1,81 +1,59 @@
-import articleImage from "../assets/projects/article-posting.png";
-import jobReview from "../assets/projects/job-review.png";
-// import portfolioImage from "../assets/projects/portfolio.png";
-
 const projects = [
   {
     id: 1,
-    slug: "article-posting-platform",
     name: "Article Posting Platform",
     description:
-      "A scalable blog platform with secure auth and rich text editing using Spring Boot microservices.",
-    longDescription:
-      "Developed a robust blog platform enabling users to create, update, and manage articles. The project is structured using Spring Boot microservices, integrated with secure JWT-based authentication, Quill rich-text editor, and a modern React + Tailwind CSS frontend.",
-    github: "https://github.com/Mansoor-P/blog-application",
-    demo: "",
-    image: articleImage,
-    date: "2024-02-20",
-    status: "Completed",
-    category: "Backend",
-    tags: ["Spring Boot", "JWT", "Microservices", "Quill"],
+      "Scalable blog platform built using Spring Boot microservices with secure JWT authentication and rich text editing.",
     techStack: ["Java", "Spring Boot", "React", "Tailwind CSS", "JWT", "Quill"],
-    features: [
-      "JWT-based authentication",
-      "Rich text editing with Quill",
-      "Microservices architecture",
-      "Responsive UI with Tailwind CSS",
+    highlights: [
+      "Designed microservices-based backend architecture",
+      "Implemented JWT-based authentication and role-based access control",
+      "Integrated Quill rich-text editor with React frontend",
+      "Dockerized services for containerized deployment",
     ],
-    challenges: [
-      "Handling inter-service communication",
-      "Secure user access control",
-      "State management between frontend and backend",
-    ],
-    architecture:
-      "Built using a microservices architecture with Spring Boot. Auth service manages JWT tokens. Article service handles CRUD operations. Frontend communicates via REST APIs.",
-    keyImplementations: [
-      "Quill editor integration with React forms",
-      "Role-based route guarding using JWT",
-      "Dockerized services for easy deployment",
-    ],
-    readingTime: "4 min",
-    featured: true,
+    github: "https://github.com/Mansoor-P/blog-application",
   },
   {
     id: 2,
-    slug: "job-review-web-app",
-    name: "Job Review Web App",
+    name: "Job Review Microservices Platform",
     description:
-      "A job listing and company review platform built with Spring Boot microservices and RabbitMQ.",
-    longDescription:
-      "A full-stack application for job seekers to browse listings, apply to roles, and review companies. The backend is microservice-based with RabbitMQ for communication and PostgreSQL for storage. Docker is used for scalable deployment.",
-    github: "https://github.com/Mansoor-P/jobsmicroservice",
-    demo: "",
-    image: jobReview,
-    date: "2023-11-12",
-    status: "Completed",
-    category: "Full Stack",
-    tags: ["Microservices", "RabbitMQ", "PostgreSQL", "Docker"],
+      "Distributed job listing and company review platform built with Spring Boot microservices and asynchronous messaging.",
     techStack: ["Java", "Spring Boot", "RabbitMQ", "PostgreSQL", "Docker"],
-    features: [
-      "Job posting and application modules",
-      "Company reviews and ratings",
-      "Microservices with async RabbitMQ queues",
-      "Scalable deployment using Docker",
+    highlights: [
+      "Developed independent microservices for jobs, reviews, and applications",
+      "Implemented asynchronous inter-service communication using RabbitMQ",
+      "Ensured data consistency across distributed services",
+      "Containerized system using Docker Compose for scalable deployment",
     ],
-    challenges: [
-      "Service-to-service communication with RabbitMQ",
-      "Data consistency across services",
-      "Review moderation system",
+    github: "https://github.com/Mansoor-P/jobsmicroservice",
+  },
+  {
+    id: 3,
+    name: "Hotel Booking Microservices API",
+    description:
+      "Microservices-based hotel booking backend system supporting service discovery and RESTful APIs.",
+    techStack: ["Java", "Spring Boot", "REST", "Docker", "PostgreSQL"],
+    highlights: [
+      "Designed domain-driven microservices for users, hotels, and bookings",
+      "Built RESTful APIs with layered architecture",
+      "Configured centralized configuration and service communication",
+      "Containerized services for consistent local deployment",
     ],
-    architecture:
-      "Each domain (jobs, reviews, applications) is an independent Spring Boot microservice. Services communicate asynchronously via RabbitMQ queues. PostgreSQL is used per service with Docker Compose setup.",
-    keyImplementations: [
-      "Asynchronous messaging using RabbitMQ",
-      "REST APIs with service discovery",
-      "Containerized microservices using Docker",
+    github: "https://github.com/Mansoor-P/hotel-booking-api-microservices",
+  },
+  {
+    id: 4,
+    name: "Developer Portfolio Website",
+    description:
+      "Responsive developer portfolio built with modern React architecture and Tailwind CSS.",
+    techStack: ["React", "Tailwind CSS", "JavaScript", "Vite"],
+    highlights: [
+      "Built reusable component-based UI architecture",
+      "Implemented dark mode and responsive layouts",
+      "Optimized performance and accessibility",
+      "Deployed via modern frontend tooling pipeline",
     ],
-    readingTime: "5 min",
-    featured: false,
+    github: "https://github.com/Mansoor-P/mansoor-developer-portfolio",
   },
 ];
 
